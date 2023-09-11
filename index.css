@@ -1,0 +1,407 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Purple: hsl(259, 100%, 65%)
+- Light red: hsl(0, 100%, 67%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Off white: hsl(0, 0%, 94%)
+- Light grey: hsl(0, 0%, 86%)
+- Smokey grey: hsl(0, 1%, 44%)
+- Off black: hsl(0, 0%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (inputs): 32px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400i, 700, 800i
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*AQUI COMIENZA EL CSS ESPECÍFICO DE LA PÁGINA*/
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-BoldItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: normal;
+}
+/*
+### Primary
+
+- Purple: hsl(259, 100%, 65%)
+- Light red: hsl(0, 100%, 67%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Off white: hsl(0, 0%, 94%)
+- Light grey: hsl(0, 0%, 86%)
+- Smokey grey: hsl(0, 1%, 44%)
+- Off black: hsl(0, 0%, 8%)
+*/
+:root {
+  /*codificacion de colores*/
+  
+    /*Texto primario*/
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+
+    /*Neutral*/
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --lighth-grey: hsl(0, 0%, 86%);
+    --smoke-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+  }
+
+body {
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--off-black);
+  color: var(--off-black)
+}
+
+main {
+  width: 1440px;
+  height: 960px;
+  background-color: var(--off-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  width: 840px;
+  height: 650px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 16px;
+  border-bottom-right-radius: 192px;
+  background-color: var(--white);
+}
+
+#container {
+  width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 56px;
+}
+
+#birth-date {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--off-white);
+}
+
+#birth-date div {
+  padding-right: 32px;
+}
+
+#birth-date h2 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  color: var(--smoke-grey);
+  margin-bottom: 12px;
+}
+
+input {
+  width: 160px;
+  height: 70px;
+  border-radius: 8px;
+  border: 1px solid var(--lighth-grey);
+  color: var(--off-black);
+  padding-left: 16px;
+  font-weight: bold;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+ -moz-appearance: textfield;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--purple);
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+.error {
+  height: 8px;
+  color: var(--light-red);
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+#age-date {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items:start;
+  justify-content: center;
+  font-size: 96px;
+  font-weight:bold;
+  font-style: italic;
+  padding-top: 32px;
+  line-height: 118px;
+}
+
+#age-date span {
+  color: var(--purple);
+}
+
+#button {
+  width: 96px;
+  background-color: var(--purple);
+  border-radius: 48px;
+  padding: 24px;
+  margin-top: 160px;
+}
+
+#button:hover {
+  background-color: var(--off-black);
+  cursor: pointer;
+}
+
+.attribution {
+  width: 1440px;
+  font-size: 11px;
+  text-align: center;
+  background-color: var(--off-white);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width:840px) {
+  main {
+    width: 375px;
+    height: 812px;
+    justify-content: start;
+    padding-top: 96px;
+  }
+
+  #app {
+    width: 350px;
+    height: 485px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    border-bottom-right-radius: 96px;
+    background-color: var(--white);
+  }
+  
+  #container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 44px;
+    padding-left: 0px;
+  }
+
+  #birth-date {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px;
+    padding-bottom: 48px;
+    border-bottom: 2px solid var(--off-white);
+  }
+
+  #birth-date div {
+    padding:0px;
+  }
+  
+  #birth-date h2 {
+    font-size: 12px;
+    margin-bottom: 6px;
+    letter-spacing: 2px;
+  }
+  
+  input {
+    width: 96px;
+    height: 56px;
+    padding-left: 8px;
+    font-size: 20px;
+  }
+
+  #age-date {
+    font-size: 56px;
+    padding-top: 72px;
+    line-height: 59px;
+  }
+
+  .error {
+    height: 8px;
+    font-size: 10px;
+    margin-top: 6px;
+  }
+
+  #button {
+    position: absolute;
+    width: 72px;
+    background-color: var(--purple);
+    border-radius: 36px;
+    padding: 22px;
+    top: 120px;
+    left: 320px;
+  }
+
+  .attribution {
+    width: 375px;
+  }
+
+}
